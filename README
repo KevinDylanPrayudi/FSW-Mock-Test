@@ -1,0 +1,49 @@
+# FSW Mock Test
+
+You can load postman file (FSW Mock Test.postman_collection.json) to test app. You haven't to worry to set jwt in authorization because i already set up script to automatically set jwt token when you loged in.
+
+The endpoints along with their requests and responses are as follows:
+
+## POST [registration]
+```
+https://fsw-mock-test-production.up.railway.app/auth/registration
+
+Body:
+    - firstname: String
+    - lastname: String
+    - email: String & Unique
+    - password: Number & minimum 6 digits
+
+Response:
+    - id: String
+    - firstname: String
+    - lastname: String
+    - email: String & Unique
+    - password: Number & minimum 6 digits
+```
+
+## POST [login]
+```
+https://fsw-mock-test-production.up.railway.app/auth/login
+Body:
+    - email: String
+    - password: Number & minimum 6 digits
+
+Response:
+    - id: String
+    - firstname: String
+    - lastname: String
+    - email: String & Unique
+    - password: Number & minimum 6 digits
+```
+
+## GET [users]
+```
+https://fsw-mock-test-production.up.railway.app/users
+
+Response:
+    - id: String
+    - firstname: String
+    - lastname: String
+    - email: String & Unique
+    - password: Number & minimum 6 digits
