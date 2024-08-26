@@ -1,9 +1,10 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+const CONTROLLER = require('../controllers/users.controller');
+const MIDDLEWARE = require('../middlewares/authorization.middleware');
+
+router.use(MIDDLEWARE);
+router.get('/', CONTROLLER.get);
 
 module.exports = router;

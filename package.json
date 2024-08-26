@@ -6,17 +6,22 @@
     "start": "node ./bin/www",
     "start:dev": "nodemon ./bin/www"
   },
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  },
   "dependencies": {
     "@prisma/client": "^5.18.0",
     "bcrypt": "^5.1.1",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
+    "dotenv": "^16.4.5",
     "express": "~4.16.1",
     "joi": "^17.13.3",
     "jsonwebtoken": "^9.0.2",
     "morgan": "~1.9.1",
     "passport": "^0.7.0",
     "passport-jwt": "^4.0.1",
+    "passport-local": "^1.0.0",
     "prisma": "^5.18.0"
   },
   "devDependencies": {
